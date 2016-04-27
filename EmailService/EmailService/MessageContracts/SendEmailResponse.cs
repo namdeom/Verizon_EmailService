@@ -1,9 +1,9 @@
 ﻿using System.ServiceModel;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.MessageContracts
+namespace Services.EmailService.MessageContracts
 {
     /// <summary>
-    /// The output response for the <see cref="ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts.IEmailService.SendEmail"/> operation.
+    /// The output response for the <see cref="Services.EmailService.ServiceContracts.IEmailService.SendEmail"/> operation.
     /// </summary>
     [MessageContract(WrapperNamespace = SchemaNamespaces.EmailServiceMessage)]
     public class SendEmailResponse
@@ -16,7 +16,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailService.MessageContracts
     }
 
         /// <summary>
-    /// The output response for the <see cref="ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts.IEmailService.SendEmailWithBadAddressCheck"/> operation.
+    /// The output response for the <see cref="Services.EmailService.ServiceContracts.IEmailService.SendEmailWithBadAddressCheck"/> operation.
     /// </summary>
     [MessageContract(WrapperNamespace = SchemaNamespaces.EmailServiceMessage)]
     public class SendEmailWithBadAddressCheckResponse

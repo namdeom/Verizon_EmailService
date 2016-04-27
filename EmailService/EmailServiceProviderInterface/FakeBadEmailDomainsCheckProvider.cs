@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics.CodeAnalysis;
 
-namespace ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface
+namespace Services.EmailServiceProvider.Interface
 {
     [ExcludeFromCodeCoverage]
     public class FakeBadEmailDomainsCheckProvider : IBadEmailDomainsCheckProvider

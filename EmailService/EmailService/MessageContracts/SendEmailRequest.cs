@@ -1,12 +1,12 @@
 ﻿using Services.CommonLibraries.Infrastructure;
-using ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface;
+using Services.EmailServiceProvider.Interface;
 using System.Collections.Generic;
 using System.ServiceModel;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.MessageContracts
+namespace Services.EmailService.MessageContracts
 {
     /// <summary>
-    /// The input request for the <see cref="ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts.IEmailService.SendEmail"/> operation.
+    /// The input request for the <see cref="Services.EmailService.ServiceContracts.IEmailService.SendEmail"/> operation.
     /// </summary>
     [MessageContract(WrapperNamespace = SchemaNamespaces.EmailServiceMessage)]
     public class SendEmailRequest : RequestMessageBase
@@ -108,7 +108,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailService.MessageContracts
         public List<string> CarbonCopyList { get; set; }
 
         /// <summary>
-        /// A <see cref="List{T}"/> of <see cref="ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface.FileAttachment"/> attachments that are sent as part of the email. This is optional.
+        /// A <see cref="List{T}"/> of <see cref="Services.EmailServiceProvider.Interface.FileAttachment"/> attachments that are sent as part of the email. This is optional.
         /// </summary>
         [MessageBodyMember]
         public List<FileAttachment> Attachments { get; set; }

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.ServiceModel;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.MessageContracts
+namespace Services.EmailService.MessageContracts
 {
     /// <summary>
-    /// The output response for the <see cref="ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts.ISendEmailToValidAddressService.SendEmailWithBadAddressCheck"/> operation.
+    /// The output response for the <see cref="Services.EmailService.ServiceContracts.ISendEmailToValidAddressService.SendEmailWithBadAddressCheck"/> operation.
     /// </summary>
     [MessageContract(WrapperNamespace = SchemaNamespaces.EmailServiceMessage)]
     public class InvalidRecipients

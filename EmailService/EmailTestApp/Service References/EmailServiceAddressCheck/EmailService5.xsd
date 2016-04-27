@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://adp.com/ds/serviceedge/services/emailservice/message" elementFormDefault="qualified" targetNamespace="http://adp.com/ds/serviceedge/services/emailservice/message" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd3" namespace="http://adp.com/ds/serviceedge/services/emailservice" />
+  <xs:import schemaLocation="http://localhost/EmailService.svc?xsd=xsd3" namespace="http://adp.com/ds/serviceedge/services/emailservice" />
   <xs:element name="SendEmailRequest">
     <xs:complexType>
       <xs:sequence>

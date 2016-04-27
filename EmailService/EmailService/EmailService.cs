@@ -2,10 +2,10 @@
 using Services.CommonLibraries.Infrastructure;
 using Services.CommonLibraries.Infrastructure.Exceptions;
 using Services.CommonLibraries.UserProvider.Interface;
-using ADP.DS.ServiceEdge.Services.EmailService.FaultContracts;
-using ADP.DS.ServiceEdge.Services.EmailService.MessageContracts;
-using ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts;
-using ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface;
+using Services.EmailService.FaultContracts;
+using Services.EmailService.MessageContracts;
+using Services.EmailService.ServiceContracts;
+using Services.EmailServiceProvider.Interface;
 using AutoMapper;
 using Common.Logging;
 using System;
@@ -13,12 +13,12 @@ using System.Linq;
 using System.Net.Mail;
 using System.ServiceModel;
 using System.Collections.Generic;
-namespace ADP.DS.ServiceEdge.Services.EmailService
+namespace Services.EmailService
 {
     /// <summary>
-    /// Used to send email. Implements the <see cref="ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts.IEmailService"/>.
+    /// Used to send email. Implements the <see cref="Services.EmailService.ServiceContracts.IEmailService"/>.
     /// </summary>
-    /// <seealso cref="ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts.IEmailService"/>
+    /// <seealso cref="Services.EmailService.ServiceContracts.IEmailService"/>
     public class EmailService : WcfServiceBase, IEmailService
     {
         private readonly IEmailServiceProvider _emailServiceProvider;
@@ -43,40 +43,40 @@ namespace ADP.DS.ServiceEdge.Services.EmailService
         }
 
         /// <summary>
-        /// The implementation of the <see cref="ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts.IEmailService.SendEmail"/>.
+        /// The implementation of the <see cref="Services.EmailService.ServiceContracts.IEmailService.SendEmail"/>.
         /// It validates the input request and sends an email.
         /// </summary>
-        /// <param name="request">The <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest"/> that contains the input request for sending an email to one or more recipients with one or more <see cref="ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface.FileAttachment"/>.</param>
-        /// <returns>A <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailResponse"/> that contains the information if the email was sent successfully.</returns>
+        /// <param name="request">The <see cref="Services.EmailService.MessageContracts.SendEmailRequest"/> that contains the input request for sending an email to one or more recipients with one or more <see cref="Services.EmailServiceProvider.Interface.FileAttachment"/>.</param>
+        /// <returns>A <see cref="Services.EmailService.MessageContracts.SendEmailResponse"/> that contains the information if the email was sent successfully.</returns>
         /// <exception cref="System.ServiceModel.FaultException">
         /// Throws <see cref="Services.CommonLibraries.Infrastructure.Faults.SystemFault"/> when any unhandled exception occours.
         /// </exception>
         /// <exception cref="System.ServiceModel.FaultException">
-        /// Throws this fault <see cref="ADP.DS.ServiceEdge.Services.EmailService.FaultContracts.EmailServiceFault.ValidationFailed"/> when the <paramref name="request"/> fails validation.
+        /// Throws this fault <see cref="Services.EmailService.FaultContracts.EmailServiceFault.ValidationFailed"/> when the <paramref name="request"/> fails validation.
         /// Following are the possible validation failures.
         /// <list type="bullet">
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.Subject"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.Subject"/></term>
         /// <description>When it is <see langword="null"/> or <see cref="System.String.Empty"/></description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.Body"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.Body"/></term>
         /// <description>When it is <see langword="null"/> or <see cref="System.String.Empty"/></description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.FromEmailAddress"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.FromEmailAddress"/></term>
         /// <description>When it is <see langword="null"/> or <see cref="System.String.Empty"/> or is an invalid email address.</description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.Recipients"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.Recipients"/></term>
         /// <description>When it is <see langword="null"/> or empty or  contains one or more invalid email addresses.</description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.CarbonCopyList"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.CarbonCopyList"/></term>
         /// <description>When it contains one or more invalid email addresses.</description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.Attachments"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.Attachments"/></term>
         /// <description>When it contains one or more invalid attachments that is not base 64 encoded or missing file name.</description>
         /// </item> 
         /// </list>
@@ -127,40 +127,40 @@ namespace ADP.DS.ServiceEdge.Services.EmailService
         }
 
         /// <summary>
-        /// The implementation of the <see cref="ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts.ISendEmailToValidAddressService.SendEmailWithBadAddressCheck"/>.
+        /// The implementation of the <see cref="Services.EmailService.ServiceContracts.ISendEmailToValidAddressService.SendEmailWithBadAddressCheck"/>.
         /// It validates the input request and sends an email.
         /// </summary>
-        /// <param name="request">The <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest"/> that contains the input request for sending an email to one or more recipients with one or more <see cref="ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface.FileAttachment"/>.</param>
-        /// <returns>A <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailResponseWithBadAddressCheck"/> that contains the information if the email was sent successfully along with list of invalid Recipients.</returns>
+        /// <param name="request">The <see cref="Services.EmailService.MessageContracts.SendEmailRequest"/> that contains the input request for sending an email to one or more recipients with one or more <see cref="Services.EmailServiceProvider.Interface.FileAttachment"/>.</param>
+        /// <returns>A <see cref="Services.EmailService.MessageContracts.SendEmailResponseWithBadAddressCheck"/> that contains the information if the email was sent successfully along with list of invalid Recipients.</returns>
         /// <exception cref="System.ServiceModel.FaultException">
         /// Throws <see cref="Services.CommonLibraries.Infrastructure.Faults.SystemFault"/> when any unhandled exception occours.
         /// </exception>
         /// <exception cref="System.ServiceModel.FaultException">
-        /// Throws this fault <see cref="ADP.DS.ServiceEdge.Services.EmailService.FaultContracts.EmailServiceFault.ValidationFailed"/> when the <paramref name="request"/> fails validation.
+        /// Throws this fault <see cref="Services.EmailService.FaultContracts.EmailServiceFault.ValidationFailed"/> when the <paramref name="request"/> fails validation.
         /// Following are the possible validation failures.
         /// <list type="bullet">
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.Subject"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.Subject"/></term>
         /// <description>When it is <see langword="null"/> or <see cref="System.String.Empty"/></description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.Body"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.Body"/></term>
         /// <description>When it is <see langword="null"/> or <see cref="System.String.Empty"/></description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.FromEmailAddress"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.FromEmailAddress"/></term>
         /// <description>When it is <see langword="null"/> or <see cref="System.String.Empty"/> or is an invalid email address.</description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.Recipients"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.Recipients"/></term>
         /// <description>When it is <see langword="null"/> or empty or  contains one or more invalid email addresses.</description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.CarbonCopyList"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.CarbonCopyList"/></term>
         /// <description>When it contains one or more invalid email addresses.</description>
         /// </item>
         /// <item>
-        /// <term><see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest.Attachments"/></term>
+        /// <term><see cref="Services.EmailService.MessageContracts.SendEmailRequest.Attachments"/></term>
         /// <description>When it contains one or more invalid attachments that is not base 64 encoded or missing file name.</description>
         /// </item> 
         /// </list>
@@ -226,7 +226,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailService
         /// <summary>
         /// Validates the input email request.
         /// </summary>
-        /// <param name="request">The <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest"/> to be validated.</param>
+        /// <param name="request">The <see cref="Services.EmailService.MessageContracts.SendEmailRequest"/> to be validated.</param>
         /// <returns><see langword="true"/> if <paramref name="request"/> is a valid request else <see langword="false"/>.</returns>
         private bool ValidateEmailParams(SendEmailRequest request)
         {
@@ -293,7 +293,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailService
         /// <summary>
         /// Validates the input email request.
         /// </summary>
-        /// <param name="request">The <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest"/> to be validated.</param>
+        /// <param name="request">The <see cref="Services.EmailService.MessageContracts.SendEmailRequest"/> to be validated.</param>
         /// <returns><see langword="true"/> if <paramref name="request"/> is a valid request else <see langword="false"/>.</returns>
         private bool ValidateEmailParameters(SendEmailRequest request)
         {
@@ -381,8 +381,8 @@ namespace ADP.DS.ServiceEdge.Services.EmailService
         /// <summary>
         /// Validates the input email request.
         /// </summary>
-        /// <param name="request">The <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest"/> to be validated.</param>
-        /// <returns>A <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.InvalidRecipients"/> that contains the information if Recipients address is invalid or with bad domain.</returns>
+        /// <param name="request">The <see cref="Services.EmailService.MessageContracts.SendEmailRequest"/> to be validated.</param>
+        /// <returns>A <see cref="Services.EmailService.MessageContracts.InvalidRecipients"/> that contains the information if Recipients address is invalid or with bad domain.</returns>
         private InvalidRecipients ValidateEmailAddress(SendEmailRequest request)
         {
             InvalidRecipients resplist = new InvalidRecipients();

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
-using ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface;
+using Services.EmailServiceProvider.Interface;
 using Common.Logging;
 using System;
 using System.Collections.Generic;
@@ -10,10 +10,10 @@ using System.Linq;
 using System.Net.Mail;
 using Microsoft.Practices.Unity;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider
+namespace Services.EmailService.SmtpEmailServiceProvider
 {
     /// <summary>
-    /// The implementation of the <see cref="ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface.IEmailServiceProvider"/> that sends email by sending email
+    /// The implementation of the <see cref="Services.EmailServiceProvider.Interface.IEmailServiceProvider"/> that sends email by sending email
     /// through <b>SMTP</b>.
     /// </summary>
     public class SmtpEmailService : IEmailServiceProvider
@@ -96,7 +96,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider
         /// <param name="fromEmailAddress">A <see cref="string"/> that contains a valid email address of the sender.</param>
         /// <param name="recipients">A <see cref="List{T}"/> of  <see cref="string"/> that contains list of email addresses of one or more recipients.</param>
         /// <param name="ccList">A <see cref="List{T}"/> of <see cref="string"/> that contains list of email addresses of one or more CC recipients. This is optional.</param>
-        /// <param name="attachments">A <see cref="List{T}"/> of <see cref="ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface.FileAttachment"/> attachments. This is optional.</param>
+        /// <param name="attachments">A <see cref="List{T}"/> of <see cref="Services.EmailServiceProvider.Interface.FileAttachment"/> attachments. This is optional.</param>
         /// <returns>Returns <see langword="true"/> if the email was sent successfully else <see langword="false"/>.</returns>
         public bool SendEmail(string subject, string body, string fromEmailAddress, IList<string> recipients, IList<string> ccList,
             IList<FileAttachment> attachments)
@@ -123,7 +123,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider
         /// <param name="fromEmailAddress">A <see cref="string"/> that contains a valid email address of the sender.</param>
         /// <param name="recipients">A <see cref="List{T}"/> of  <see cref="string"/> that contains list of email addresses of one or more recipients.</param>
         /// <param name="ccList">A <see cref="List{T}"/> of <see cref="string"/> that contains list of email addresses of one or more CC recipients. This is optional.</param>
-        /// <param name="attachments">A <see cref="List{T}"/> of <see cref="ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface.FileAttachment"/> attachments. This is optional.</param>
+        /// <param name="attachments">A <see cref="List{T}"/> of <see cref="Services.EmailServiceProvider.Interface.FileAttachment"/> attachments. This is optional.</param>
         /// <returns>Returns <see langword="true"/> if the email was sent successfully else <see langword="false"/>.</returns>
         private bool SendSmtpEmail(string subject, string body, string fromEmailAddress, IList<string> recipients, IList<string> ccList, IList<FileAttachment> attachments)
         {
@@ -177,7 +177,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider
         /// <param name="fromEmailAddress">A <see cref="string"/> that contains a valid email address of the sender.</param>
         /// <param name="recipients">A <see cref="List{T}"/> of  <see cref="string"/> that contains list of email addresses of one or more recipients.</param>
         /// <param name="ccList">A <see cref="List{T}"/> of <see cref="string"/> that contains list of email addresses of one or more CC recipients. This is optional.</param>
-        /// <param name="attachments">A <see cref="List{T}"/> of <see cref="ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface.FileAttachment"/> attachments. This is optional.</param>
+        /// <param name="attachments">A <see cref="List{T}"/> of <see cref="Services.EmailServiceProvider.Interface.FileAttachment"/> attachments. This is optional.</param>
         /// <returns>Returns <see langword="true"/> if the parameters are valid else <see langword="false"/>.</returns>
         private bool ValidateEmailParams(string subject, string body, string fromEmailAddress, IList<string> recipients, IList<string> ccList, IList<FileAttachment> attachments)
         {

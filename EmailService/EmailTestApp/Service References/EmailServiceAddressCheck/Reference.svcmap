@@ -19,20 +19,20 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://emailservice.dev01.adpserviceedge.com/EmailService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/EmailService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EmailService.wsdl" MetadataType="Wsdl" ID="61228aaf-d290-44eb-85c7-5f5a52e3549e" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?wsdl" />
-    <MetadataFile FileName="EmailService1.wsdl" MetadataType="Wsdl" ID="ba468e8a-2de2-4d42-8cb9-c4f808737f07" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="EmailService.disco" MetadataType="Disco" ID="09a1b68d-f140-4410-b0bc-d142fff42559" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?disco" />
-    <MetadataFile FileName="EmailService.xsd" MetadataType="Schema" ID="9fcf2767-0a56-4967-8ff4-b59b3c8e8fe2" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd5" />
-    <MetadataFile FileName="EmailService1.xsd" MetadataType="Schema" ID="0c7f2d14-3282-440f-8552-d12e6d1a608f" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd4" />
-    <MetadataFile FileName="EmailService2.xsd" MetadataType="Schema" ID="22feee5f-9ef6-45d8-9849-435c445f0e63" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd7" />
-    <MetadataFile FileName="EmailService3.xsd" MetadataType="Schema" ID="be132302-bada-47c0-8980-7f82bce98d0d" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd6" />
-    <MetadataFile FileName="EmailService4.xsd" MetadataType="Schema" ID="a9680690-46be-49d0-9d35-714866cb2264" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd1" />
-    <MetadataFile FileName="EmailService5.xsd" MetadataType="Schema" ID="52bc8ff9-b7de-4a28-b288-6237498788ce" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd0" />
-    <MetadataFile FileName="EmailService6.xsd" MetadataType="Schema" ID="cd9edb02-c253-46c2-b16a-bdd167e63d0d" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd3" />
-    <MetadataFile FileName="EmailService7.xsd" MetadataType="Schema" ID="ef3cb81a-f78e-4ed9-b612-1c5d0c88e9f7" SourceId="1" SourceUrl="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EmailService.wsdl" MetadataType="Wsdl" ID="61228aaf-d290-44eb-85c7-5f5a52e3549e" SourceId="1" SourceUrl="http://localhost/EmailService.svc?wsdl" />
+    <MetadataFile FileName="EmailService1.wsdl" MetadataType="Wsdl" ID="ba468e8a-2de2-4d42-8cb9-c4f808737f07" SourceId="1" SourceUrl="http://localhost/EmailService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="EmailService.disco" MetadataType="Disco" ID="09a1b68d-f140-4410-b0bc-d142fff42559" SourceId="1" SourceUrl="http://localhost/EmailService.svc?disco" />
+    <MetadataFile FileName="EmailService.xsd" MetadataType="Schema" ID="9fcf2767-0a56-4967-8ff4-b59b3c8e8fe2" SourceId="1" SourceUrl="http://localhost/EmailService.svc?xsd=xsd5" />
+    <MetadataFile FileName="EmailService1.xsd" MetadataType="Schema" ID="0c7f2d14-3282-440f-8552-d12e6d1a608f" SourceId="1" SourceUrl="http://localhost/EmailService.svc?xsd=xsd4" />
+    <MetadataFile FileName="EmailService2.xsd" MetadataType="Schema" ID="22feee5f-9ef6-45d8-9849-435c445f0e63" SourceId="1" SourceUrl="http://localhost/EmailService.svc?xsd=xsd7" />
+    <MetadataFile FileName="EmailService3.xsd" MetadataType="Schema" ID="be132302-bada-47c0-8980-7f82bce98d0d" SourceId="1" SourceUrl="http://localhost/EmailService.svc?xsd=xsd6" />
+    <MetadataFile FileName="EmailService4.xsd" MetadataType="Schema" ID="a9680690-46be-49d0-9d35-714866cb2264" SourceId="1" SourceUrl="http://localhost/EmailService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EmailService5.xsd" MetadataType="Schema" ID="52bc8ff9-b7de-4a28-b288-6237498788ce" SourceId="1" SourceUrl="http://localhost/EmailService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EmailService6.xsd" MetadataType="Schema" ID="cd9edb02-c253-46c2-b16a-bdd167e63d0d" SourceId="1" SourceUrl="http://localhost/EmailService.svc?xsd=xsd3" />
+    <MetadataFile FileName="EmailService7.xsd" MetadataType="Schema" ID="ef3cb81a-f78e-4ed9-b612-1c5d0c88e9f7" SourceId="1" SourceUrl="http://localhost/EmailService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

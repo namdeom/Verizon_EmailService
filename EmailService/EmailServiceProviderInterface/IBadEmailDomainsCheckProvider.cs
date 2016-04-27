@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface
+namespace Services.EmailServiceProvider.Interface
 {
     public interface IBadEmailDomainsCheckProvider
     {

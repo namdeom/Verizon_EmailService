@@ -2,7 +2,7 @@
 using System;
 using System.ServiceModel;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService
+namespace Services.EmailService
 {
     ///<summary>
     /// Email Service mapping profile. This class contains configuration to handle common mapping from one type to another.

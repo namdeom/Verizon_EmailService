@@ -1,5 +1,5 @@
 ﻿
-namespace ADP.DS.ServiceEdge.Services.EmailService
+namespace Services.EmailService
 {
     /// <summary>
     /// The email service endpoint namespaces.

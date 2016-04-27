@@ -1,11 +1,11 @@
 ﻿using Services.CommonLibraries.Infrastructure.Exceptions;
 using Services.CommonLibraries.Infrastructure.Faults;
-using ADP.DS.ServiceEdge.Services.EmailService.FaultContracts;
+using Services.EmailService.FaultContracts;
 using AutoMapper;
 using System;
 using System.ServiceModel;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService
+namespace Services.EmailService
 {
     /// <summary>
     ///   A class that maps all the exceptions to its corresponding fault.

@@ -1,9 +1,9 @@
 ﻿using Services.CommonLibraries.Infrastructure.Faults;
-using ADP.DS.ServiceEdge.Services.EmailService.FaultContracts;
-using ADP.DS.ServiceEdge.Services.EmailService.MessageContracts;
+using Services.EmailService.FaultContracts;
+using Services.EmailService.MessageContracts;
 using System.ServiceModel;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts
+namespace Services.EmailService.ServiceContracts
 {
     /// <summary>
     /// This is an interface to define the operations that will be exposed in the Email Service

@@ -15,7 +15,7 @@ namespace EmailTestApp.EmailServiceAddressCheck {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FileAttachment", Namespace="http://schemas.datacontract.org/2004/07/ADP.DS.ServiceEdge.Services.EmailServiceP" +
+    [System.Runtime.Serialization.DataContractAttribute(Name="FileAttachment", Namespace="http://schemas.datacontract.org/2004/07/Services.EmailServiceP" +
         "rovider.Interface")]
     [System.SerializableAttribute()]
     public partial class FileAttachment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -143,7 +143,7 @@ namespace EmailTestApp.EmailServiceAddressCheck {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="InvalidRecipients", Namespace="http://schemas.datacontract.org/2004/07/ADP.DS.ServiceEdge.Services.EmailService." +
+    [System.Runtime.Serialization.DataContractAttribute(Name="InvalidRecipients", Namespace="http://schemas.datacontract.org/2004/07/Services.EmailService." +
         "MessageContracts")]
     [System.SerializableAttribute()]
     public partial class InvalidRecipients : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {

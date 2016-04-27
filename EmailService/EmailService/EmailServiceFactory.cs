@@ -1,7 +1,7 @@
 ﻿using Services.CommonLibraries.Infrastructure;
-using ADP.DS.ServiceEdge.Services.EmailService.ServiceContracts;
-using ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider.Entities;
-using ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider.Repository;
+using Services.EmailService.ServiceContracts;
+using Services.EmailService.SmtpEmailServiceProvider.Entities;
+using Services.EmailService.SmtpEmailServiceProvider.Repository;
 using AutoMapper;
 using Common.Logging;
 using GenericRepository;
@@ -10,7 +10,7 @@ using System.Diagnostics.CodeAnalysis;
 
 
 
-namespace ADP.DS.ServiceEdge.Services.EmailService
+namespace Services.EmailService
 {
     /// <summary>
     /// Factory that resolves the run time depoendencies for the smail service

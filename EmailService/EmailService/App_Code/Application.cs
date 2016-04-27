@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.App_Code
+namespace Services.EmailService.App_Code
 {
     /// <summary>
     /// Initialization code for the application.

@@ -1,5 +1,5 @@
 ﻿
-namespace ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface
+namespace Services.EmailServiceProvider.Interface
 {
     /// <summary>
     /// A data structure to store the file name and its content to send as an attachment of an email message.

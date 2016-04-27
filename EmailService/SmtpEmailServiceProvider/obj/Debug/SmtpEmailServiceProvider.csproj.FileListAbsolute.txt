@@ -1,0 +1,1 @@
+C:\Users\Admin\Desktop\Verizon\EmailService\SmtpEmailServiceProvider\obj\Debug\SmtpEmailServiceProvider.csprojResolveAssemblyReference.cache

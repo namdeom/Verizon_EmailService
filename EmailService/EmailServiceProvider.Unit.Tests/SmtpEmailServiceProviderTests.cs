@@ -1,5 +1,5 @@
-﻿using ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider;
-using ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface;
+﻿using Services.EmailService.SmtpEmailServiceProvider;
+using Services.EmailServiceProvider.Interface;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;

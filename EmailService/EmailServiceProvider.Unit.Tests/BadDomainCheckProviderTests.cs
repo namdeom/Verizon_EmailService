@@ -1,5 +1,5 @@
-﻿using ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider;
-using ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface;
+﻿using Services.EmailService.SmtpEmailServiceProvider;
+using Services.EmailServiceProvider.Interface;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -9,9 +9,9 @@ using System.Net.Mail;
 using System.Text;
 using System.Linq;
 using Common.Logging;
-using ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider.Repository;
+using Services.EmailService.SmtpEmailServiceProvider.Repository;
 using GenericRepository;
-using ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider.Entities;
+using Services.EmailService.SmtpEmailServiceProvider.Entities;
 
 namespace EmailServiceProvider.Unit.Tests
 {

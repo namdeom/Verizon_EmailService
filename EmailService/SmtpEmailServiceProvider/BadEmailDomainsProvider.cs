@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface;
-using ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider.Repository;
+using Services.EmailServiceProvider.Interface;
+using Services.EmailService.SmtpEmailServiceProvider.Repository;
 using Microsoft.Practices.Unity;
 using System.Diagnostics.CodeAnalysis;
 using GenericRepository;
-using ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider.Entities;
+using Services.EmailService.SmtpEmailServiceProvider.Entities;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider
+namespace Services.EmailService.SmtpEmailServiceProvider
 {
     public class BadEmailDomainsProvider : IBadEmailDomainsCheckProvider
     {

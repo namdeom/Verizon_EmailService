@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface
+namespace Services.EmailServiceProvider.Interface
 {
     /// <summary>
     /// This interface is used to abstract the actual implementation away from the email service. 
@@ -39,7 +39,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface
         /// <param name="fromEmailAddress">A <see cref="string"/> that contains a valid email address of the sender.</param>
         /// <param name="recipients">A <see cref="List{T}"/> of  <see cref="string"/> that contains list of email addresses of one or more recipients.</param>
         /// <param name="ccList">A <see cref="List{T}"/> of <see cref="string"/> that contains list of email addresses of one or more CC recipients. This is optional.</param>
-        /// <param name="attachments">A <see cref="List{T}"/> of <see cref="ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface.FileAttachment"/> attachments. This is optional.</param>
+        /// <param name="attachments">A <see cref="List{T}"/> of <see cref="Services.EmailServiceProvider.Interface.FileAttachment"/> attachments. This is optional.</param>
         /// <returns>Returns <see langword="true"/> if the email was sent successfully else <see langword="false"/>.</returns>
         bool SendEmail(string subject, string body, string fromEmailAddress, IList<string> recipients, IList<string> ccList, IList<FileAttachment> attachments);
     }

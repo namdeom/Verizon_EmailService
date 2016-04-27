@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.SmtpEmailServiceProvider.Entities
+namespace Services.EmailService.SmtpEmailServiceProvider.Entities
 {
     using System;
     using System.Data.Entity;

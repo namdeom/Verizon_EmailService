@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService.FaultContracts
+namespace Services.EmailService.FaultContracts
 {
     /// <summary>
     /// Faults that are specific to email service failures.
@@ -9,7 +9,7 @@ namespace ADP.DS.ServiceEdge.Services.EmailService.FaultContracts
     public enum EmailServiceFault
     {
         /// <summary>
-        /// Returned when the input <see cref="ADP.DS.ServiceEdge.Services.EmailService.MessageContracts.SendEmailRequest"/> has one or more validation failures.
+        /// Returned when the input <see cref="Services.EmailService.MessageContracts.SendEmailRequest"/> has one or more validation failures.
         /// </summary>
         [EnumMember]
         ValidationFailed

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Services.CommonLibraries.UserProvider.Interface;
 
-namespace ADP.DS.ServiceEdge.Services.EmailService
+namespace Services.EmailService
 {
     /// <summary>
     /// An implementation of the <see cref="Services.CommonLibraries.UserProvider.Interface.IUserProvider"/> used by email service.

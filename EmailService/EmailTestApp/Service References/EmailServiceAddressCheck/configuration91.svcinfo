@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IEmailService" contract="EmailServiceAddressCheck.IEmailService" bindingType="basicHttpBinding" address="http://emailservice.dev01.adpserviceedge.com/EmailService.svc" bindingConfiguration="BasicHttpBinding_IEmailService">
+    <endpoint name="BasicHttpBinding_IEmailService" contract="EmailServiceAddressCheck.IEmailService" bindingType="basicHttpBinding" address="http://localhost/EmailService.svc" bindingConfiguration="BasicHttpBinding_IEmailService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://emailservice.dev01.adpserviceedge.com/EmailService.svc</serializedValue>
+          <serializedValue>http://localhost/EmailService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

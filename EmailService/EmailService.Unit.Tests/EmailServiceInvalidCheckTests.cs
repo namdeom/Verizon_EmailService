@@ -9,15 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Services.CommonLibraries.Infrastructure.Faults;
 using Services.CommonLibraries.Tests;
-using ADP.DS.ServiceEdge.Services.EmailService;
-using ADP.DS.ServiceEdge.Services.EmailService.FaultContracts;
-using ADP.DS.ServiceEdge.Services.EmailService.MessageContracts;
+using Services.EmailService;
+using Services.EmailService.FaultContracts;
+using Services.EmailService.MessageContracts;
 using AutoMapper;
 using Common.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface;
-using ES = ADP.DS.ServiceEdge.Services.EmailService;
+using Services.EmailServiceProvider.Interface;
+using ES = Services.EmailService;
 
 namespace EmailService.Unit.Tests
 {
