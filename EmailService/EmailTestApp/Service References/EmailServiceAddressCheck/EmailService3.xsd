@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://adp.com/ds/serviceedge/services/2013-11-28" elementFormDefault="qualified" targetNamespace="http://adp.com/ds/serviceedge/services/2013-11-28" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SystemFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="SystemFault" nillable="true" type="tns:SystemFault" />
+  <xs:complexType name="AuthorizationFault">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="AuthorizationFault" nillable="true" type="tns:AuthorizationFault" />
+</xs:schema>

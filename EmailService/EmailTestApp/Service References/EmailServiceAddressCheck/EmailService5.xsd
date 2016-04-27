@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://adp.com/ds/serviceedge/services/emailservice/message" elementFormDefault="qualified" targetNamespace="http://adp.com/ds/serviceedge/services/emailservice/message" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd3" namespace="http://adp.com/ds/serviceedge/services/emailservice" />
+  <xs:element name="SendEmailRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q1:Attachments" />
+        <xs:element xmlns:q2="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q2:Body" />
+        <xs:element xmlns:q3="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q3:CarbonCopyList" />
+        <xs:element xmlns:q4="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q4:FromEmailAddress" />
+        <xs:element xmlns:q5="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q5:Recipients" />
+        <xs:element xmlns:q6="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q6:Subject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q7:IsSuccess" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmailWithBadAddressCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q8:InvalidRecipients" />
+        <xs:element xmlns:q9="http://adp.com/ds/serviceedge/services/emailservice" minOccurs="0" ref="q9:IsSuccess" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

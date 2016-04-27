@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://adp.com/ds/serviceedge/services/emailservice" elementFormDefault="qualified" targetNamespace="http://adp.com/ds/serviceedge/services/emailservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface" />
+  <xs:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/ADP.DS.ServiceEdge.Services.EmailService.MessageContracts" />
+  <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface" name="Attachments" nillable="true" type="q1:ArrayOfFileAttachment" />
+  <xs:element name="Body" nillable="true" type="xs:string" />
+  <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="CarbonCopyList" nillable="true" type="q2:ArrayOfstring" />
+  <xs:element name="FromEmailAddress" nillable="true" type="xs:string" />
+  <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="Recipients" nillable="true" type="q3:ArrayOfstring" />
+  <xs:element name="Subject" nillable="true" type="xs:string" />
+  <xs:element name="SessionId" nillable="true" type="xs:string" />
+  <xs:element name="IsSuccess" type="xs:boolean" />
+  <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ADP.DS.ServiceEdge.Services.EmailService.MessageContracts" name="InvalidRecipients" nillable="true" type="q4:InvalidRecipients" />
+</xs:schema>

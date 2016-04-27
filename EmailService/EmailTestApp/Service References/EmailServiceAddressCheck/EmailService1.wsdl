@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://adp.com/ds/serviceedge/services/emailservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://adp.com/ds/serviceedge/services/emailservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://adp.com/ds/serviceedge/services/emailservice/Imports">
+      <xsd:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd0" namespace="http://adp.com/ds/serviceedge/services/emailservice/message" />
+      <xsd:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd3" namespace="http://adp.com/ds/serviceedge/services/emailservice" />
+      <xsd:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd5" namespace="http://adp.com/ds/serviceedge/services/emailservice/fault" />
+      <xsd:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd6" namespace="http://adp.com/ds/serviceedge/services/2013-11-28" />
+      <xsd:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ADP.DS.ServiceEdge.Services.EmailServiceProvider.Interface" />
+      <xsd:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://emailservice.dev01.adpserviceedge.com/EmailService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/ADP.DS.ServiceEdge.Services.EmailService.MessageContracts" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SendEmailRequest">
+    <wsdl:part xmlns:q1="http://adp.com/ds/serviceedge/services/emailservice/message" name="parameters" element="q1:SendEmailRequest" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailRequest_Headers">
+    <wsdl:part name="SessionId" element="tns:SessionId" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailResponse">
+    <wsdl:part xmlns:q2="http://adp.com/ds/serviceedge/services/emailservice/message" name="parameters" element="q2:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailService_SendEmail_EmailServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://adp.com/ds/serviceedge/services/emailservice/fault" name="detail" element="q3:EmailServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmailService_SendEmail_SystemFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://adp.com/ds/serviceedge/services/2013-11-28" name="detail" element="q4:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmailService_SendEmail_AuthorizationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://adp.com/ds/serviceedge/services/2013-11-28" name="detail" element="q5:AuthorizationFault" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailWithBadAddressCheckResponse">
+    <wsdl:part xmlns:q6="http://adp.com/ds/serviceedge/services/emailservice/message" name="parameters" element="q6:SendEmailWithBadAddressCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailService_SendEmailWithBadAddressCheck_EmailServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://adp.com/ds/serviceedge/services/emailservice/fault" name="detail" element="q7:EmailServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmailService_SendEmailWithBadAddressCheck_SystemFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://adp.com/ds/serviceedge/services/2013-11-28" name="detail" element="q8:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmailService_SendEmailWithBadAddressCheck_AuthorizationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://adp.com/ds/serviceedge/services/2013-11-28" name="detail" element="q9:AuthorizationFault" />
+  </wsdl:message>
+  <wsdl:portType name="IEmailService">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmail" name="SendEmailRequest" message="tns:SendEmailRequest" />
+      <wsdl:output wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailResponse" name="SendEmailResponse" message="tns:SendEmailResponse" />
+      <wsdl:fault wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailEmailServiceFaultFault" name="EmailServiceFaultFault" message="tns:IEmailService_SendEmail_EmailServiceFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailSystemFaultFault" name="SystemFaultFault" message="tns:IEmailService_SendEmail_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailAuthorizationFaultFault" name="AuthorizationFaultFault" message="tns:IEmailService_SendEmail_AuthorizationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailWithBadAddressCheck">
+      <wsdl:input wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailWithBadAddressCheck" name="SendEmailRequest" message="tns:SendEmailRequest" />
+      <wsdl:output wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailWithBadAddressCheckResponse" name="SendEmailWithBadAddressCheckResponse" message="tns:SendEmailWithBadAddressCheckResponse" />
+      <wsdl:fault wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailWithBadAddressCheckEmailServiceFaultFault" name="EmailServiceFaultFault" message="tns:IEmailService_SendEmailWithBadAddressCheck_EmailServiceFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailWithBadAddressCheckSystemFaultFault" name="SystemFaultFault" message="tns:IEmailService_SendEmailWithBadAddressCheck_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://adp.com/ds/serviceedge/services/emailservice/IEmailService/SendEmailWithBadAddressCheckAuthorizationFaultFault" name="AuthorizationFaultFault" message="tns:IEmailService_SendEmailWithBadAddressCheck_AuthorizationFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

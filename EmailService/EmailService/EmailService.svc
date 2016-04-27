@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost 
+    Factory="ADP.DS.ServiceEdge.Services.EmailService.EmailServiceFactory, ADP.DS.ServiceEdge.Services.EmailService"
+    Service="ADP.DS.ServiceEdge.Services.EmailService.EmailService, ADP.DS.ServiceEdge.Services.EmailService"
+%>

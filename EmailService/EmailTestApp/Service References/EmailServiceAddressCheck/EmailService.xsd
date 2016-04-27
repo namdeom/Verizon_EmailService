@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://adp.com/ds/serviceedge/services/emailservice/fault" elementFormDefault="qualified" targetNamespace="http://adp.com/ds/serviceedge/services/emailservice/fault" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="EmailServiceFault">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ValidationFailed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EmailServiceFault" nillable="true" type="tns:EmailServiceFault" />
+</xs:schema>
